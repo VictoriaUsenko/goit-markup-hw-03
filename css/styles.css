@@ -8,6 +8,21 @@
   --text-light-color: #e7e9fc;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -37,6 +52,13 @@ body {
   overflow: hidden;
 }
 
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 .title {
   font-size: 36px;
   line-height: 1.11;
@@ -46,6 +68,8 @@ body {
   text-transform: capitalize;
 
   color: var(--text-title-color);
+
+  margin-bottom: 72px;
 }
 
 .item-title {
@@ -62,6 +86,17 @@ body {
 
 /* ------------------Header----------------- */
 
+.header {
+  background: var(--primery-white-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -70,25 +105,40 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primery-color);
-}
 
-.header-logo:focus,
-.header-logo:hover {
-  /* border-bottom: 2px solid; */
+  margin-right: 77px;
 }
 
 .logo-web {
   color: var(--accent-color);
 }
 
+.header-navigation {
+  padding: 24px 0;
+
+  display: flex;
+}
+
 .navigation-list {
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.navigation-list .item-link.current {
+  color: var(--accent-color);
 }
 
 .item-link {
   color: var(--primery-color);
+  padding: 24px 0;
 }
 
 .item-link:focus,
@@ -96,12 +146,19 @@ body {
   color: var(--text-color);
 }
 
-.navigation-list .item-link.current {
-  color: var(--accent-color);
+.header-contacts {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .contacts-link {
   color: var(--text-color);
+  padding: 24px 0;
 }
 
 .contacts-link:focus,
@@ -117,7 +174,13 @@ body {
 /* --------------Hero----------- */
 
 .hero {
+  text-align: center;
   background-color: var(--primery-color);
+  padding: 192px 0;
+}
+
+.hero .container {
+  width: 522px;
 }
 
 .hero-title {
@@ -127,7 +190,10 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--primery-white-color);
+
+  margin-bottom: 42px;
 }
+
 .hero-btn {
   font-family: inherit;
   font-weight: 700;
@@ -137,6 +203,8 @@ body {
   letter-spacing: 0.04em;
   background: var(--accent-color);
   color: var(--primery-white-color);
+
+  padding: 16px 32px;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -149,23 +217,71 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 4px;
 }
+/* -------------------Advantages------------------- */
+.advantages {
+  padding: 120px 0;
+}
+
+.advantages-list {
+  display: flex;
+}
+.advantages-item {
+  max-width: 264px;
+}
+.advantages-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.advantages .item-title {
+  margin-bottom: 8px;
+}
+
+/* -------------------Works------------------- */
+.works {
+  padding-bottom: 120px;
+}
+
+.works-list {
+  display: flex;
+}
+
+.works-item:not(:last-child) {
+  margin-right: 24px;
+}
 /* -------------------Team------------------- */
 .team {
   background-color: var(--accent-light-color);
+  padding: 120px 0;
 }
+
+.team-list {
+  display: flex;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 24px;
+}
+
 .team-card {
   background-color: var(--primery-white-color);
 }
-.team-list-item .item-title {
-  text-align: center;
+
+.team-card-content {
+  max-width: 264px;
+  padding: 32px 16px;
 }
-.team-list-item .item-text {
+.team-item .item-title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.team-item .item-text {
   text-align: center;
 }
 
 /* -----------------Footer-------------------- */
 .tagline {
   background-color: var(--primery-color);
+  padding: 100px 0;
 }
 
 .tagline-logo {
@@ -187,6 +303,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-light-color);
+  max-width: 264px;
+  margin-top: 16px;
 }
 
 /* ------------------Portfolio------------- */
