@@ -39,6 +39,7 @@ body {
 
 .link {
   text-decoration: none;
+  display: block;
 }
 
 .visually-hidden {
@@ -110,6 +111,7 @@ body {
   text-transform: uppercase;
   color: var(--primery-color);
 
+  padding: 24px 0;
   margin-right: 77px;
 }
 
@@ -118,7 +120,7 @@ body {
 }
 
 .header-navigation {
-  padding: 24px 0;
+  /* padding: 24px 0; */
 
   display: flex;
   margin-right: auto;
@@ -148,7 +150,7 @@ body {
 }
 
 .header-contacts {
-  padding: 24px 0;
+  /* padding: 24px 0; */
   display: flex;
   gap: 40px;
 }
